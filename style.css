@@ -1,0 +1,150 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #003366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* razmak med logotipom in naslovom */
+  padding: 1rem;
+  position: relative;
+}
+
+header .logo-header {
+  flex: 0 0 auto; /* fiksna širina logotipa */
+}
+
+header .logo {
+  max-height: 80px;
+  height: auto;
+}
+
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.8rem;
+  margin: 0;
+}/*poravna naslov na sredino headerja, gledano tudi glede na dolžino naslova*/
+
+header .logo {
+  width: 400px;
+  height: 100px;
+  background: white;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+ul {
+  background-color: #005599;
+  display: flex;
+  flex-wrap: wrap; /*elementi se prestavijo v novo vrstico*/
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+ul li a:hover {
+  background-color: #ff9933;
+  color: #003366;
+}
+/* spremeni barvo bloka v meniju ko z miško podrsam nanj v oranžno in barvo besedila v temno modro, omogoči da me na željeno mesto preusmeri klik kamorkoli znotraj bloka*/
+p {
+  max-width: 900px;
+  margin: 1rem auto;
+  padding: 0 1.2rem;
+  line-height: 1.7;
+  font-size: 1rem;
+}/*rem je velikost elementa glede na velikost pisave v html*/
+
+img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 90%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 0.8rem 0;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+
+  header .logo {
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  ul li a {
+    padding: 0.8rem;
+    text-align: center;
+  }
+}/* spremeni meni v stolpec na manjših zaslonih*/
+figure {
+  margin: 1.5em auto;
+  text-align: center;
+  max-width: 90%;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+figcaption {
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 700px) {
+  .slike-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2em;
+  }
+
+  .slike-grid figure {
+    flex: 1 1 300px;
+    max-width: 320px;
+  }
+}/*prilagodi postavitev elementov na zaslonih širših od 700 px*/
+
+
+
