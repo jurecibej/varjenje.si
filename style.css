@@ -15,6 +15,9 @@ header {
   padding: 1rem;
   position: relative;
 }
+a {
+  color:"white";
+}
 
 header .logo-header {
   flex: 0 0 auto; /* fiksna širina logotipa */
